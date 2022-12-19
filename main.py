@@ -32,7 +32,7 @@ categories = ['smartfoniy', 'smart_chasiy', 'naushniki', 'detskie_chasiy_s_gps',
 
 for category in categories:
     data = get_pages(category, 15)
-    with open(f'{category}.csv', 'w', encoding='utf-8', newline='') as file:
+    with open(f'csv_files/{category}.csv', 'w', encoding='utf-8', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['name', 'price'])
         writer.writerows(data)
